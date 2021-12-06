@@ -8,9 +8,6 @@
         font-style: #{$style};
     }
 }
-// Example
-// @include font("Mozer", "Mozer-Light", "300", "normal");
-// @include font("Mozer", "Mozer-Bold", "700", "normal");
 @import "./_fonts.scss";
 
 
@@ -18,7 +15,6 @@
 @import "./_reset.scss";
 @import "./_global.scss";
 @import "./main.scss";
-
 
 // --------- Plugins ----------
 

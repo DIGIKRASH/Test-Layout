@@ -59,6 +59,20 @@ section {
     margin: 0 auto;
     padding: 0 15px;
 }
+.wrapper {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(#000, 0.3);
+        z-index: 0;
+    }
+}
+
 
 // --------- ScrollBar ----------
 ::-webkit-scrollbar {
