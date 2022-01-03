@@ -1,0 +1,249 @@
+//Кнопка с плавным градиентом
+.btn {
+    transition: 0.5s;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, orange 0%, yellow 51%, orange 100%);
+    &:hover {
+        background-position: right center;
+    }
+}
+
+//Укороченный title и текст
+.short-text {
+    h1 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    p {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow-y: hidden;
+    }
+}
+
+//Текст с градиентом
+.gradient-text {
+    background: linear-gradient(45deg, orange 33%, red 66%, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: yellow;
+    display: table;
+}
+
+//Custom Checkbox
+.checkbox {
+    label {
+        transition: 0.3s;
+    }
+    &:hover {
+        .custom-checkbox + label::before {
+            border-color: blue;
+        }
+        label {
+            color: blue;
+        }
+    }
+    .custom-checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    /* для элемента label, связанного с .custom-checkbox */
+    .custom-checkbox + label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+    /* создание в label псевдоэлемента before со следующими стилями */
+    .custom-checkbox + label::before {
+        transition: 0.3s;
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        margin-right: 0.5em;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+    }
+    /* стили для чекбокса, находящегося в состоянии checked */
+    .custom-checkbox:checked + label::before {
+        border-color: #0b76ef;
+        background-color: #0b76ef;
+        background-image: url("../img/checkbox.svg");
+    }
+}
+
+//Custom RadioButton
+.radio {
+    span {
+        transition: 0.3s;
+    }
+    &:hover {
+        & > input:not(:disabled):not(:checked) + span:hover::before {
+            border-color: blue;
+        }
+        span {
+            color: blue;
+        }
+    }
+    & > input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    /* для элемента label связанного с & */
+    & > span {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+    /* создание в label псевдоэлемента  before со следующими стилями */
+    & > span::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        margin-right: 0.5em;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+        transition: 0.3s;
+    }
+    /* стили для радиокнопки, находящейся в состоянии checked */
+    & > input:checked + span::before {
+        border-color: #0b76ef;
+        background-color: #0b76ef;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3.5' fill='%23fff'/%3e%3c/svg%3e");
+    }
+}
+
+//Кнопка копирования текста
+.copy {
+    display: flex;
+    align-items: center;
+    button {
+        position: relative;
+        margin-left: 8px;
+        svg {
+            width: 14px;
+            height: 14px;
+            fill: transparent;
+            stroke: #000;
+            transition: 0.3s;
+        }
+        &:hover {
+            svg {
+                stroke: #c1995e;
+            }
+        }
+    }
+    span {
+        pointer-events: none;
+        display: none;
+        font-size: 12px;
+        line-height: 14px;
+        border-radius: 5px;
+        color: #fff;
+        position: absolute;
+        background: rgba(0, 0, 0, 1);
+        border: 1px solid rgba(255, 255, 255, 0.02);
+        padding: 3px;
+        right: -5px;
+        top: -25px;
+        z-index: 50;
+    }
+}
+
+//Переключение по табам
+.tabs {
+    .tab {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    .tabs__filters-item {
+        cursor: pointer;
+        &.active {
+            font-weight: 700;
+        }
+    }
+}
+
+// --------- header ----------
+.header1 {
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 25px;
+        height: 20px;
+        z-index: 200;
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: #000;
+            top: -83px;
+            left: -69px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            transition: transform 0.3s cubic-bezier(0.04, -0.1, 0.29, 0.98),
+                width 0.3s cubic-bezier(0.04, -0.1, 0.29, 0.98), height 0.3s cubic-bezier(0.04, -0.1, 0.29, 0.98);
+        }
+        span {
+            width: 100%;
+            height: 3px;
+            border-radius: 2px;
+            background-color: #fefefe;
+            transition: 0.2s;
+            z-index: 110;
+        }
+        span:nth-child(2) {
+            transition: opacity 0.1s;
+            opacity: 1;
+        }
+    }
+    &.mobile {
+        span:nth-child(1) {
+            transform: rotate(-225deg) translate(7px, -6px);
+        }
+        span:nth-child(3) {
+            transform: rotate(225deg) translate(6px, 5px);
+        }
+        span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger::before {
+            width: 100vh;
+            height: 100vh;
+            transform: scale(5);
+            transition-duration: 1s;
+        }
+        .menu__list-wrapper {
+            pointer-events: visible;
+            opacity: 1;
+            transition-duration: 0.2s;
+            transition-delay: 0.3s;
+            .menu__list-item {
+                display: block;
+            }
+        }
+    }
+}

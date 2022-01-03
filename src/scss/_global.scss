@@ -1,5 +1,5 @@
 // --------- Varies ----------
-$font: "Sans Serif";
+$font: "Roboto";
 $main: #1c1c1c;
 
 // ------- Global-Tags --------
@@ -21,6 +21,8 @@ body {
     min-width: 320px;
     position: relative;
     overflow-x: hidden;
+    background-color: #fafafa;
+    padding: 50px 0;
 }
 a {
     text-decoration: none;
@@ -50,6 +52,16 @@ textarea {
 }
 section {
     position: relative;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $main;
+    h3 {
+        opacity: 0.85;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
 }
 
 

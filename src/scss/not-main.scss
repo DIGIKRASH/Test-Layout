@@ -1,0 +1,74 @@
+//Кнопка с плавным градиентом
+.btn {
+    color: #fff;
+    padding: 7px 30px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: $font;
+}
+
+//Укороченный title и текст
+.short-text {
+    h1 {
+        width: 150px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+    }
+    p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+//Текст с градиентом
+.gradient-text {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+//Переключение по табам
+.tabs {
+    .tabs__filters {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .tabs__filters-item:not(:last-child) {
+        margin-right: 15px;
+    }
+}
+
+//Hamburger1
+.header1 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    z-index: 150;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        padding-bottom: 10px;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        margin-right: 35px;
+        padding-top: 15px;
+    }
+    .menu__list li:not(:last-child) {
+        margin-right: 25px;
+    }
+}
