@@ -29,7 +29,7 @@
         height: 50px;
         margin-top: 0;
         margin-bottom: 0;
-        .hamburger {
+        .hamburger1 {
             display: flex;
         }
         .menu__list-wrapper {
@@ -65,6 +65,131 @@
         }
         .menu__list li:not(:last-child) {
             margin-right: 0px;
+        }
+    }
+
+    .header2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        .hamburger2 {
+            display: flex;
+        }
+        .menu__list {
+            text-align: right;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(150%);
+            will-change: transform;
+            transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+            &::before {
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                z-index: -1;
+                width: 60em;
+                background: $main;
+                content: "";
+                transform: skewX(-10deg) translateX(100%);
+                transform-origin: bottom left;
+                will-change: transform;
+                transition: transform 0.5scubic-bezier(0.19, 1, 0.22, 1);
+            }
+            a {
+                font-size: 1.5em;
+                color: white !important;
+                font-weight: 500;
+                transform: translateX(100%);
+            }
+        }
+        .menu__list {
+            .menu__list-item a {
+                font-size: 20px;
+                line-height: 26px;
+                position: relative;
+                padding-bottom: 5px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: #fff;
+                    width: 0;
+                    height: 2px;
+                    transition: width 0.3s ease-out;
+                }
+            }
+            .menu__list-item:hover a {
+                &::after {
+                    width: 100%;
+                }
+            }
+            .menu__list-item:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 38px;
+            }
+        }
+    }
+
+    .header3 {
+        .hamburger3 {
+            display: flex;
+        }
+        .menu {
+            position: relative;
+        }
+        .menu__list {
+            pointer-events: none;
+            z-index: 1000;
+            position: absolute;
+            right: 0;
+            top: 150px;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            overflow-x: hidden;
+            &::before {
+                content: "";
+                position: fixed;
+                right: 0;
+                top: 0;
+                height: 100vh;
+                width: 100vw;
+                transform: translate(100vw, 0);
+                -ms-transform: translatex(-100vw);
+                box-sizing: border-box;
+                pointer-events: none;
+                padding-top: 125px;
+                transition: width 475ms ease-out, transform 450ms ease, border-radius 0.8s 0.1s ease;
+                border-bottom-left-radius: 100vw;
+                background-color: #000;
+            }
+        }
+        .menu__list-item {
+            list-style: none;
+            text-transform: uppercase;
+            pointer-events: auto;
+            white-space: nowrap;
+            box-sizing: border-box;
+            transform: translatex(100vw);
+            -ms-transform: translatex(-100vw);
+            a {
+                transition: background-color 0.3s;
+                text-decoration: none;
+                color: #fff;
+                text-align: right;
+                display: block;
+                padding: 25px 10px;
+                font-size: calc(40px - 0.5vw);
+            }
         }
     }
 }

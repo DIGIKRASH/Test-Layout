@@ -4,7 +4,10 @@
   "description": "Профессиональная сборка gulp",
   "main": "index.html",
   "dependencies": {
-    "gulp": "^4.0.2"
+    "air-datepicker": "^3.1.0",
+    "gulp": "^4.0.2",
+    "magnific-popup": "^1.1.0",
+    "mixitup": "^3.3.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",

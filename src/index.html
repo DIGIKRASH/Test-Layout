@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/style.min.css">
 
 
-
 </head>
 
 <body>
@@ -46,7 +45,7 @@
 
 
         <!-- Текст с градиентом -->
-        <section>
+        <section id="gradient-text">
             <h3>Текст с градиентом</h3>
 
             <p class="gradient-text">Lorem ipsum dolor sit amet consectetur</p>
@@ -138,6 +137,63 @@
         </section>
 
 
+        <!-- Переключение по табам с помощью плагина(mixitup)-->
+        <section>
+            <h3>Переключение по табам с помощью плагина(mixitup)</h3>
+
+            <div class="tabs-mix">
+
+                <ul class="tabs-mix__filters">
+                    <li class="tabs-mix__filters-item" data-filter=".tab1">Таб1</li>
+                    <li class="tabs-mix__filters-item" data-filter=".tab2">Таб2</li>
+                    <li class="tabs-mix__filters-item" data-filter=".tab3">Таб3</li>
+                </ul>
+
+                <div class="tabs-mix__inner">
+                    <div class="tab-mix mix tab1" data-order="1">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab fugiat cumque nihil reiciendis
+                            voluptates numquam ullam doloribus in aspernatur atque, doloremque repellat animi vitae
+                            omnis,
+                            totam eum, earum saepe ipsum.
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab fugiat cumque nihil reiciendis
+                            voluptates numquam ullam doloribus in aspernatur atque, doloremque repellat animi vitae
+                            omnis,
+                            totam eum, earum saepe ipsum.
+                        </p>
+                    </div>
+                    <div class="tab-mix mix tab2" data-order="2">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab fugiat cumque nihil reiciendis
+                            voluptates numquam ullam doloribus in aspernatur atque, doloremque repellat animi vitae
+                            omnis,
+                            totam eum, earum saepe ipsum.</p>
+                    </div>
+                    <div class="tab-mix mix tab3" data-order="3">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab fugiat cumque nihil reiciendis
+                        voluptates numquam ullam doloribus in aspernatur atque, doloremque repellat animi vitae omnis,
+                        totam
+                        eum, earum saepe ipsum.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab fugiat cumque nihil reiciendis
+                        voluptates numquam ullam doloribus in aspernatur atque, doloremque repellat animi vitae omnis,
+                        totam
+                        eum, earum saepe ipsum.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab fugiat cumque nihil reiciendis
+                        voluptates numquam ullam doloribus in aspernatur atque, doloremque repellat animi vitae omnis,
+                        totam
+                        eum, earum saepe ipsum.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Google карта -->
+        <section id="google-map">
+            <h3>Google карта(Не работает без Api ключа, обязательно нужно прописывать высоту)</h3>
+
+            <div id="map" style="height: 400px"></div>
+        </section>
+
+
         <!-- Hamburger1 -->
         <section>
             <h3>Hamburger1 (Media)</h3>
@@ -165,7 +221,7 @@
                             </ul>
                         </div>
 
-                        <div class="hamburger">
+                        <div class="hamburger1">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -176,18 +232,617 @@
         </section>
 
 
-        <!-- Кнопка копирования текста -->
+        <!-- Hamburger2 (Media) -->
         <section>
-            <h3>Кнопка копирования текста</h3>
+            <h3>Hamburger2 (Media)</h3>
 
+            <header class="header2">
+                <div class="container">
+                    <nav class="menu">
+
+                        <ul class="menu__list">
+                            <li class="menu__list-item">
+                                <a class="link" href="#ways">Направления</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="link" href="#prices">Цены</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="link" href="#gallery">Галерея</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="link" href="#faq">FAQ</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="link" href="#blog">Блог</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="link" href="#contact">Контакты</a>
+                            </li>
+                        </ul>
+
+
+                        <div class="hamburger__wrapper"></div>
+                        <button class="hamburger2">
+                            <span class="hamburger__line"></span>
+                            <span class="hamburger__line"></span>
+                            <span class="hamburger__line"></span>
+                            <span class="hamburger__line"></span>
+                        </button>
+
+                    </nav>
+                </div>
+            </header>
+        </section>
+
+
+        <!-- Hamburger3 (Media) -->
+        <section>
+            <h3>Hamburger3</h3>
+
+            <header class="header3">
+                <nav class="menu">
+
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="about.html">О нас</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="blog.html">Блог</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="shop.html">Магазин</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="contact.html">Контакты</a>
+                        </li>
+                    </ul>
+
+
+                    <div class="hamburger3">
+                        <span class="hamburger__line"></span>
+                        <span class="hamburger__line"></span>
+                        <span class="hamburger__line"></span>
+                    </div>
+
+                </nav>
+            </header>
+        </section>
+
+
+        <!-- Loading1 -->
+        <section>
+            <h3>Loading1</h3>
+
+            <div class="loading1"></div>
+        </section>
+
+
+        <!-- Loading2 -->
+        <section>
+            <h3>Loading2</h3>
+
+            <div class="loading2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+
+
+        <!-- Аккордион1 -->
+        <section id="accordion1">
+            <h3>Аккордион1</h3>
+
+            <ul class="faq">
+                <li class="faq__item active">
+                    <div class="faq__item-title">Чем Mavic 2 лучше Mavic Pro?</div>
+                    <div class="faq__item-text" style="display: block;">В Mavic 2 улучшены практически
+                        все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума,
+                        обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная
+                        функция Hyperlapse (гиперлапс)..</div>
+                </li>
+                <li class="faq__item">
+                    <div class="faq__item-title">Чем Mavic 2 лучше Mavic Pro?</div>
+                    <div class="faq__item-text">В Mavic 2 улучшены практически
+                        все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума,
+                        обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная
+                        функция Hyperlapse (гиперлапс)..</div>
+                </li>
+                <li class="faq__item">
+                    <div class="faq__item-title">Чем Mavic 2 лучше Mavic Pro?</div>
+                    <div class="faq__item-text">В Mavic 2 улучшены практически
+                        все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума,
+                        обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная
+                        функция Hyperlapse (гиперлапс)..</div>
+                </li>
+            </ul>
+        </section>
+
+
+        <!-- Аккордион2 -->
+        <section>
+            <h3>Аккордион2</h3>
+
+            <ul class="faq2">
+                <li class="faq__item active">
+                    <div class="faq__item-title">Чем Mavic 2 лучше Mavic Pro?</div>
+                    <div class="faq__item-text" style="display: block;">В Mavic 2 улучшены практически
+                        все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума,
+                        обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная
+                        функция Hyperlapse (гиперлапс)..</div>
+                </li>
+                <li class="faq__item">
+                    <div class="faq__item-title">Чем Mavic 2 лучше Mavic Pro?</div>
+                    <div class="faq__item-text">В Mavic 2 улучшены практически
+                        все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума,
+                        обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная
+                        функция Hyperlapse (гиперлапс)..</div>
+                </li>
+                <li class="faq__item">
+                    <div class="faq__item-title">Чем Mavic 2 лучше Mavic Pro?</div>
+                    <div class="faq__item-text">В Mavic 2 улучшены практически
+                        все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума,
+                        обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная
+                        функция Hyperlapse (гиперлапс)..</div>
+                </li>
+            </ul>
+        </section>
+
+
+        <!-- Scroll к Якорям -->
+        <section>
+            <h3>Scroll к Якорям</h3>
+
+            <div class="list-yack">
+                <a href="#gradient-text">gradient-text</a>
+                <a href="#google-map">google-map</a>
+                <a href="#accordion1">accordion1</a>
+            </div>
+        </section>
+
+
+        <!-- Scroll к блоку -->
+        <section>
+            <h3>Scroll к блоку</h3>
+
+            <button class="scroll-btn">accordion1</button>
+        </section>
+
+
+        <!-- Кнопка поднятия на вверх -->
+        <section>
+            <h3>Кнопка поднятия на вверх</h3>
+
+            <button class="ufive_uptop"></button>
+        </section>
+
+
+        <!-- Мощный select (semantic-ui) -->
+        <section>
+            <h3>Мощный select (semantic-ui)</h3>
+
+            <div class="ui labeled icon top right pointing dropdown button select2">
+                <i class="filter icon"></i>
+                <span class="text">Filter Posts</span>
+                <div class="menu">
+                    <div class="ui search icon input">
+                        <i class="search icon"></i>
+                        <input type="text" name="search" placeholder="Search issues...">
+                    </div>
+                    <div class="divider"></div>
+                    <div class="header">
+                        <i class="tags icon"></i>
+                        Filter by tag
+                    </div>
+                    <div class="item">
+                        <div class="ui red empty circular label"></div>
+                        Important
+                    </div>
+                    <div class="item">
+                        <div class="ui blue empty circular label"></div>
+                        Announcement
+                    </div>
+                    <div class="item">
+                        <div class="ui black empty circular label"></div>
+                        Discussion
+                    </div>
+                    <div class="divider"></div>
+                    <div class="header">
+                        <i class="calendar icon"></i>
+                        Filter by date
+                    </div>
+                    <div class="item">
+                        <i class="olive circle icon"></i>
+                        This Week
+                    </div>
+                    <div class="item">
+                        <i class="violet circle icon"></i>
+                        This Month
+                    </div>
+                    <div class="item">
+                        <i class="orange circle icon"></i>
+                        This Year
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Обычный select -->
+        <section>
+            <h3>Обычный select</h3>
+
+            <select class="simple-select" placeholder="Please choose">
+                <option>List entry #1</option>
+                <option>List entry #2</option>
+                <option>List entry #3</option>
+                <option>List entry #4</option>
+            </select>
+        </section>
+
+
+        <!-- Аналог FancyBox (Magnific-Popup/подправлен курсор) -->
+        <section>
+            <h3>Аналог FancyBox (Magnific-Popup/подправлен курсор)</h3>
+
+            <a class="image-popup-vertical-fit" href="http://farm9.staticflickr.com/8241/8589392310_7b6127e243_b.jpg"
+                title="Caption. Can be aligned to any side and contain any HTML.">
+                <img src="http://farm9.staticflickr.com/8241/8589392310_7b6127e243_s.jpg" width="75" height="75">
+            </a>
+
+            <a class="popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto">Open YouTube video</a><br>
+        </section>
+
+
+        <!-- Input[number] без стрелок и нельзя написать букву e -->
+        <section>
+            <h3>Input[number] без стрелок и нельзя написать букву e</h3>
+
+            <input type="number" class="input-num">
+        </section>
+
+
+        <!-- Маски для input'ов -->
+        <section>
+            <h3>Маски для input'ов</h3>
+
+            <input type="text" id="input-phone" placeholder="phone">
+            <input type="text" id="input-card" placeholder="card">
+        </section>
+
+
+        <!-- Датапикер -->
+        <section>
+            <h3>Датапикер (Air-DatePicker)</h3>
+            <p>Можно выбрать диапазон, одну дату или сразу несколько</p>
+
+            <input type="date">
+
+            <input type="text" class="datepicker-here form-control" id="el" name="today" data-language="fr" value=""
+                placeholder="Select Range" />
+
+            <input type="text" class="datepicker-here form-control" id="el2" name="today" data-language="fr" value="" />
 
         </section>
 
 
-        <!-- <button class="ufive_uptop"></button> -->
+        <!-- Отсчет с учетом окончаний слов -->
+        <section>
+            <h3>Отсчет с учетом окончаний слов (надо менять классы чтобы работали два отсчета)</h3>
+
+            <div class="countdown">
+                <span id="mins">5</span>
+                <span id="mins-text">минут</span>
+                <span id="secs">0</span>
+                <span id="secs-text">секунд</span>
+            </div>
+        </section>
+
+
+        <!-- Обычный отсчет -->
+        <section>
+            <h3>Обычный отсчет (надо менять классы чтобы работали два отсчета)</h3>
+
+
+            <div class="countdown2" id="countdown2">05:00</div>
+        </section>
+
+
+        <!-- Отсчет от Даты -->
+        <section>
+            <h3>Отсчет от Даты</h3>
+            <a href="https://denis-creative.com/jstimer/">https://denis-creative.com/jstimer/</a>
+            <p>есть таймер с рестартом, также есть с выводом сообщения после того как закончиться таймер</p>
+            <br>
+
+            <div id="countdown" class="countdown">
+                <div class="countdown-number">
+                    <span class="days countdown-time"></span>
+                    <span class="countdown-text">Days</span>
+                </div>
+                <div class="countdown-number">
+                    <span class="hours countdown-time"></span>
+                    <span class="countdown-text">Hours</span>
+                </div>
+                <div class="countdown-number">
+                    <span class="minutes countdown-time"></span>
+                    <span class="countdown-text">Minutes</span>
+                </div>
+                <div class="countdown-number">
+                    <span class="seconds countdown-time"></span>
+                    <span class="countdown-text">Seconds</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Odometer -->
+        <section>
+            <h3>Odometer</h3>
+
+            <div class="odometer" id="odometer"></div>
+        </section>
+
+
+        <!-- Проверка валидации  -->
+        <section>
+            <h3>Проверка валидации </h3>
+
+            <form id="contacts__form" class="contacts__form">
+                <div class="contacts__form-inputs">
+                    <div class="contacts__form-input input-block">
+                        <input type="text" id="contacts__form-email" name="contacts__form-email" class="input"
+                            placeholder="Ваш e-mail*">
+                    </div>
+
+                    <div class="contacts__form-input input-block">
+                        <input type="text" id="contacts__form-name" name="contacts__form-name" class="input"
+                            placeholder="Ваше имя">
+                    </div>
+                </div>
+
+                <div class="contacts__form-textarea input-block">
+                    <textarea name="contacts__form-message" id="contacts__form-message" class="input"
+                        placeholder="Ваше сообщение*"></textarea>
+                </div>
+
+                <button type="submit" class="contacts__form-button btn">Отправить</button>
+            </form>
+        </section>
+
+
+        <!-- Отправка на почту -->
+        <section>
+            <h3>Отправка на почту</h3>
+            <form class="form">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="Site Name">
+                <input type="hidden" name="admin_email" value="espd.b@mail.ru">
+                <input type="hidden" name="form_subject" value="Форма с хейдера">
+                <!-- END Hidden Required Fields -->
+
+                <input name="Имя" type="text" class="modal-block__input input" placeholder="Имя">
+
+                <input name="Телефон" type="tel" class="modal-block__input input" placeholder="Телефон*"
+                    id="header-phone" onkeyup="headerForm()">
+
+                <div class="modal-block__footer">
+                    <button class="modal-block__btn btn btn--orange" id="header-button" disabled>Получить
+                        проект</button>
+                    <p class="modal-block__footer-link">
+                        Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и
+                        соглашаетесь с
+                        <a href="#">Пользовательским соглашением</a>
+                    </p>
+                </div>
+            </form>
+        </section>
+
+
+
 
         <!-- Scripts -->
         <script src="js/script.min.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+        </script>
+        <script>
+            function initMap() {
+                var element = document.getElementById('map');
+                var options = {
+                    zoom: 16,
+                    center: { lat: 50.445675, lng: 30.517064 },
+                    styles: [
+                        { "featureType": "all", "elementType": "labels.text.fill", "stylers": [{ "saturation": 36 }, { "color": "#000000" }, { "lightness": 40 }] }, { "featureType": "all", "elementType": "labels.text.stroke", "stylers": [{ "visibility": "on" }, { "color": "#000000" }, { "lightness": 16 }] }, { "featureType": "all", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "administrative", "elementType": "geometry.fill", "stylers": [{ "color": "#000000" }, { "lightness": 20 }] }, { "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{ "color": "#000000" }, { "lightness": 17 }, { "weight": 1.2 }] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 20 }] }, { "featureType": "poi", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 21 }] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{ "color": "#000000" }, { "lightness": 17 }] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{ "color": "#000000" }, { "lightness": 29 }, { "weight": 0.2 }] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 18 }] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 16 }] }, { "featureType": "transit", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 19 }] }, { "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 17 }] }
+                    ]
+                };
+
+                var myMap = new google.maps.Map(element, options);
+
+                var markers = [
+                    {
+                        coordinates: { lat: 50.445692, lng: 30.507820 },
+                        info: '<h3>Киев, ул. Ивана Франка, 40</h3>',
+                        image: {
+                            url: "img/map-icon.svg",
+                        }
+                    },
+                    {
+                        coordinates: { lat: 50.445675, lng: 30.517064 },
+                        info: '<h3>Киев, ул. Богдана Хмельницкого, 10</h3>',
+                        image: {
+                            url: "img/map-icon.svg",
+                        }
+                    },
+                ];
+
+                for (var i = 0; i < markers.length; i++) {
+                    addMarker(markers[i]);
+                }
+
+                function addMarker(properties) {
+                    var marker = new google.maps.Marker({
+                        position: properties.coordinates,
+                        map: myMap
+                    });
+
+                    if (properties.image) {
+                        marker.setIcon(properties.image);
+                    }
+
+                    if (properties.info) {
+                        var InfoWindow = new google.maps.InfoWindow({
+                            content: properties.info
+                        });
+
+                        marker.addListener('click', function () {
+                            InfoWindow.open(myMap, marker);
+                        });
+                    }
+                }
+            }
+        </script>
+
+        <!-- Отсчет с учетом окончаний слов -->
+        <script>
+            var timeInSecs;
+            var ticker;
+
+            function startTimer(secs) {
+                timeInSecs = parseInt(secs);
+                ticker = setInterval("tick()", 1000);
+            }
+
+            function tick() {
+                var secs = timeInSecs;
+                if (secs > 0) {
+                    timeInSecs--;
+                }
+                else {
+                    clearInterval(ticker);
+                    startTimer(5 * 60); // 5 minutes in seconds
+                }
+
+                var mins = Math.floor(secs / 60);
+                secs %= 60;
+
+                document.getElementById("mins-text").innerHTML =
+                    (mins == 1 || (mins > 19 && mins % 10 == 1)) ? 'минуты' : ((mins > 1 && mins < 5) || (secs > 19 && secs % 10 > 1 && mins % 10 < 5)) ? 'минуты' : 'минут';
+                document.getElementById("secs-text").innerHTML =
+                    (secs == 1 || (secs > 19 && secs % 10 == 1)) ? 'секунда' : ((secs > 1 && secs < 5) || (secs > 19 && secs % 10 > 1 && secs % 10 < 5)) ? 'секунды' : 'секунд';
+
+                document.getElementById("mins").innerHTML = mins;
+                document.getElementById("secs").innerHTML = secs;
+            }
+            startTimer(5 * 60); // 5 minutes in seconds
+        </script>
+
+        <!-- Обычный отсчет -->
+        <script>
+            var timeInSecs;
+            var ticker;
+
+            function startTimer(secs) {
+                timeInSecs = parseInt(secs);
+                ticker = setInterval("tick()", 1000);
+            }
+
+            function tick() {
+                var secs = timeInSecs;
+                if (secs > 0) {
+                    timeInSecs--;
+                }
+                else {
+                    clearInterval(ticker);
+                    startTimer(5 * 60); // 5 minutes in seconds
+                }
+
+                var mins = Math.floor(secs / 60);
+                secs %= 60;
+
+                var result = ((mins < 10) ? "0" : "") + mins + ":" + ((secs < 10) ? "0" : "") + secs;
+
+                document.getElementById("countdown2").innerHTML = result;
+            }
+            startTimer(5 * 60); // 5 minutes in seconds
+        </script>
+
+        <!-- Отсчет от Даты -->
+        <script>
+            function getTimeRemaining(endtime) {
+                var t = Date.parse(endtime) - Date.parse(new Date());
+                var seconds = Math.floor((t / 1000) % 60);
+                var minutes = Math.floor((t / 1000 / 60) % 60);
+                var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                return {
+                    'total': t,
+                    'days': days,
+                    'hours': hours,
+                    'minutes': minutes,
+                    'seconds': seconds
+                };
+            }
+
+            function initializeClock(id, endtime) {
+                var clock = document.getElementById(id);
+                var daysSpan = clock.querySelector('.days');
+                var hoursSpan = clock.querySelector('.hours');
+                var minutesSpan = clock.querySelector('.minutes');
+                var secondsSpan = clock.querySelector('.seconds');
+
+                function updateClock() {
+                    var t = getTimeRemaining(endtime);
+
+                    daysSpan.innerHTML = t.days;
+                    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+                    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+                    if (t.total <= 0) {
+                        clearInterval(timeinterval);
+                    }
+                }
+
+                updateClock();
+                var timeinterval = setInterval(updateClock, 1000);
+            }
+
+            var deadline = 'December 31 2022';
+            initializeClock('countdown', deadline);
+
+            // var deadline = '2015-12-31';
+        </script>
+
+        <!-- Odometer -->
+        <script>
+            (function () {
+                var counter = 10;
+                window.odometerOptions = {
+                    duration: 1000,
+                    theme: 'default'
+                };
+
+                odometer.innerHTML = counter;
+
+                setInterval(function () {
+                    counter += 5;
+                    odometer.innerHTML = counter;
+                }, 1000);
+            })();
+        </script>
 
     </div>
 </body>

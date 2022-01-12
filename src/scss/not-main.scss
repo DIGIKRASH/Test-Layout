@@ -1,4 +1,4 @@
-//Кнопка с плавным градиентом
+// Кнопка с плавным градиентом
 .btn {
     color: #fff;
     padding: 7px 30px;
@@ -10,7 +10,7 @@
     font-family: $font;
 }
 
-//Укороченный title и текст
+// Укороченный title и текст
 .short-text {
     h1 {
         width: 150px;
@@ -25,13 +25,13 @@
     }
 }
 
-//Текст с градиентом
+// Текст с градиентом
 .gradient-text {
     text-transform: uppercase;
     font-weight: 900;
 }
 
-//Переключение по табам
+// Переключение по табам
 .tabs {
     .tabs__filters {
         display: flex;
@@ -43,7 +43,23 @@
     }
 }
 
-//Hamburger1
+// Переключение по табам с помощью плагина(mixitup)
+.tabs-mix {
+    .tabs-mix__filters {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+    .tabs-mix__filters-item.mixitup-control-active {
+        font-weight: 700;
+    }
+    .tabs-mix__filters-item:not(:last-child) {
+        margin-right: 15px;
+    }
+}
+
+// Hamburger1
 .header1 {
     margin-top: 20px;
     margin-bottom: 50px;
@@ -71,4 +87,79 @@
     .menu__list li:not(:last-child) {
         margin-right: 25px;
     }
+}
+
+// Hamburger2
+.header2 {
+    .menu__list {
+        display: flex;
+        justify-content: center;
+        text-align: right;
+    }
+    .menu__list-item:not(:last-child) {
+        margin-right: 38px;
+    }
+}
+
+// Аккордион1
+.faq {
+    .faq__item {
+        position: relative;
+        padding-bottom: 25px;
+        cursor: pointer;
+    }
+    .faq__item-title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        color: #000;
+    }
+    .faq__item-text {
+        font-size: 16px;
+        line-height: 19px;
+        padding: 15px 10px 5px;
+        color: #000;
+    }
+}
+
+// Аккордион2
+.faq2 {
+    .faq__item {
+        position: relative;
+        padding-bottom: 25px;
+        cursor: pointer;
+    }
+    .faq__item-title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        color: #000;
+    }
+    .faq__item-text {
+        font-size: 16px;
+        line-height: 19px;
+        padding: 15px 10px 5px;
+        color: #000;
+    }
+}
+
+//Scroll к Якорям
+.list-yack {
+    a:not(:last-child) {
+        margin-right: 20px;
+    }
+    a {
+        font-weight: 500;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+//Scroll к блоку
+.scroll-btn {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: #ffa;
 }

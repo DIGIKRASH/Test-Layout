@@ -18,7 +18,11 @@
 @import "./main.scss";
 
 // --------- Plugins ----------
-
+@import "./semantic.scss";
+@import "./simple-select.scss";
+@import "../../node_modules/magnific-popup/dist/magnific-popup.css";
+@import "../../node_modules/air-datepicker/air-datepicker.css";
+@import "./odometer.scss";
 
 // --------- Media ----------
 @import "./media.scss";
