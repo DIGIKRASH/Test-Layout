@@ -10,6 +10,8 @@
 @@include('../js/jquery.maskedinput.js');
 @@include('../../node_modules/air-datepicker/air-datepicker.js');
 @@include('../js/odometer.js');
+@@include('../js/theia-sticky-sidebar.min.js');
+@@include('../../node_modules/swiper/swiper-bundle.min.js');
 
 
 // Main-JS -----------------

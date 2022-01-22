@@ -143,7 +143,7 @@
     }
 }
 
-//Scroll к Якорям
+// Scroll к Якорям
 .list-yack {
     a:not(:last-child) {
         margin-right: 20px;
@@ -156,10 +156,119 @@
     }
 }
 
-//Scroll к блоку
+// Scroll к блоку
 .scroll-btn {
     border: 1px solid #000;
     border-radius: 5px;
     padding: 10px 15px;
     background-color: #ffa;
 }
+
+// Фиксированный сайдбар
+.fixed-sidebar {
+    .fixed-sidebar__inner {
+        display: flex;
+        border: 1px solid #000;
+    }
+    .content {
+        width: 70%;
+    }
+    .sidebar {
+        width: 30%;
+    }
+}
+
+// Модольное окно 1
+.modal1-window {
+    .modal1 {
+        opacity: 0;
+        width: 20%;
+        height: 30%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        background-color: #fff;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 300;
+        transition: 0.3s;
+        pointer-events: none;
+        &.active {
+            opacity: 1;
+            pointer-events: visible;
+        }
+    }
+    .modal1__btn {
+        &:hover {
+            font-weight: 700;
+        }
+    }
+}
+body {
+    &::after {
+        pointer-events: none;
+        opacity: 0;
+        content: "";
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.25);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transition: 0.3s;
+    }
+    &.modal {
+        &::after {
+            pointer-events: visible;
+            opacity: 1;
+        }
+    }
+}
+
+// Модольное окно 2
+.modal2-window {
+    .modal2 {
+        opacity: 0;
+        width: 20%;
+        height: 30%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        background-color: #fff;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 300;
+        transition: 0.3s;
+        pointer-events: none;
+        &.active {
+            opacity: 1;
+            pointer-events: visible;
+        }
+    }
+    .modal2__btn {
+        &:hover {
+            font-weight: 700;
+        }
+    }
+}
+
+// Swiper-Slider
+.swiper {
+    height: 250px;
+    &-slide {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        background-color: #FFC;
+    }
+    .swiper-pagination-bullet {
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+

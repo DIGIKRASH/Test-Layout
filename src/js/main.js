@@ -247,3 +247,86 @@ $(document).ready(function () {
     return false;
   });
 });
+
+
+// Фиксированный сайдбар 
+jQuery('.content, .sidebar').theiaStickySidebar({
+  additionalMarginTop: 30
+});
+
+
+// Модольное окно 1
+$('.modal1-window__btn').click(function () {
+  $('.modal1').toggleClass('active');
+  $('body').toggleClass('modal');
+});
+$('.modal1__btn').click(function () {
+  $(this).parent().removeClass('active');
+  $('body').removeClass('modal');
+});
+// Убираем модальное окно при клике на другую область
+$(document).mouseup(function (e) { // событие клика по веб-документу
+  var div = $('.modal1'); // тут указываем класс элемента
+  if (!div.is(e.target) // если клик был не по нашему блоку
+    && div.has(e.target).length === 0) { // и не по его дочерним элементам
+    $('.modal1').removeClass('active');
+    $('body').removeClass('modal');
+  }
+});
+
+
+// Модольное окно 2
+$('.modal2-window__btn').click(function () {
+  $('.modal2').toggleClass('active');
+});
+$('.modal2__btn').click(function () {
+  $(this).parent().removeClass('active');
+});
+// Убираем модальное окно при клике на другую область
+$(document).mouseup(function (e) { // событие клика по веб-документу
+  var div = $('.modal2, .modal2-window__btn'); // тут указываем класс элемента
+  if (!div.is(e.target) // если клик был не по нашему блоку
+    && div.has(e.target).length === 0) { // и не по его дочерним элементам
+    $('.modal2').removeClass('active');
+  }
+});
+
+
+// Swiper-Slider
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 5,
+  spaceBetween: 30,
+  loop: true,
+  // direction: "vertical",
+  // effect: "fade",
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  centeredSlides: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  }
+});

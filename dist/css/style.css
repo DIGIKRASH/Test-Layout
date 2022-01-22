@@ -11,6 +11,8 @@
 
 @import url(../../node_modules/air-datepicker/air-datepicker.css);
 
+@import url(../../node_modules/swiper/swiper-bundle.min.css);
+
 html,
 body,
 div,
@@ -758,6 +760,124 @@ section h3 {
   border-radius: 5px;
   padding: 10px 15px;
   background-color: #ffa;
+}
+
+.fixed-sidebar .fixed-sidebar__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #000;
+}
+
+.fixed-sidebar .content {
+  width: 70%;
+}
+
+.fixed-sidebar .sidebar {
+  width: 30%;
+}
+
+.modal1-window .modal1 {
+  opacity: 0;
+  width: 20%;
+  height: 30%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 300;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.modal1-window .modal1.active {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.modal1-window .modal1__btn:hover {
+  font-weight: 700;
+}
+
+body::after {
+  pointer-events: none;
+  opacity: 0;
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.25);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body.modal::after {
+  pointer-events: visible;
+  opacity: 1;
+}
+
+.modal2-window .modal2 {
+  opacity: 0;
+  width: 20%;
+  height: 30%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 300;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.modal2-window .modal2.active {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.modal2-window .modal2__btn:hover {
+  font-weight: 700;
+}
+
+.swiper {
+  height: 250px;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 200px;
+  background-color: #FFC;
+}
+
+.swiper .swiper-pagination-bullet:hover {
+  opacity: 1;
 }
 
 .btn {
