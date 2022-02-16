@@ -16,6 +16,7 @@
 </head>
 
 <body>
+
     <div class="container">
 
         <!-- Кнопка с плавным градиентом -->
@@ -28,9 +29,9 @@
 
         <!-- Укороченный title и текст -->
         <section>
-            <h3>Укороченный title и текст</h3>
+            <h3 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s">Укороченный title и текст</h3>
 
-            <div class="short-text">
+            <div class="short-text wow slideInRight" data-wow-offset="10" data-wow-iteration="10">
                 <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, inventore!</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id laboriosam deserunt illum adipisci
                     eveniet sit consectetur ratione molestias, nam quidem, explicabo, velit excepturi laudantium
@@ -188,9 +189,10 @@
         </section>
 
 
-        <!-- Google карта -->
+        <!-- Google карта c WOW-->
         <section id="google-map">
-            <h3>Google карта(Не работает без Api ключа, обязательно нужно прописывать высоту)</h3>
+            <h3 class="wow animate__animated animate__fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s">Google
+                карта(Не работает без Api ключа, обязательно нужно прописывать высоту) c WOW</h3>
 
             <div id="map" style="height: 400px"></div>
         </section>
@@ -654,6 +656,16 @@
         </section>
 
 
+        <!-- Кнопка очистки input'a -->
+        <section>
+            <h3>Кнопка очистки input'a</h3>
+            <form>
+                <input type="text" id="clear__form-input">
+                <button id="clear__form-btn">Clear</button>
+            </form>
+        </section>
+
+
         <!-- Фиксированный сайдбар -->
         <section class="fixed-sidebar">
             <h3>Фиксированный сайдбар</h3>
@@ -661,8 +673,10 @@
             <div class="fixed-sidebar__inner">
                 <div class="content" style="height: 1500px;"></div>
                 <aside class="sidebar">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam debitis expedita voluptates esse
-                        eligendi temporibus, adipisci fuga consequuntur ipsam dolores, repudiandae aperiam quas quam?
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam debitis expedita voluptates
+                        esse
+                        eligendi temporibus, adipisci fuga consequuntur ipsam dolores, repudiandae aperiam quas
+                        quam?
                         Placeat similique nulla odit architecto numquam.</p>
                 </aside>
             </div>
@@ -724,6 +738,9 @@
 
             <div id="container2" style="width:100%; height:400px;"></div>
         </section>
+
+
+
 
 
 
@@ -985,6 +1002,7 @@
                 });
             });
         </script>
+
 
     </div>
 </body>

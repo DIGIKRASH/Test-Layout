@@ -330,3 +330,21 @@ const swiper = new Swiper('.swiper', {
     }
   }
 });
+
+
+wow = new WOW(
+  {
+    boxClass: 'wow',      // default
+    animateClass: 'animate__animated', // default
+    offset: 100,          // default
+    mobile: true,       // default
+    live: true        // default
+  }
+)
+wow.init();
+
+
+$('#clear__form-btn').click(function (e) {
+  e.preventDefault();
+  $('#clear__form-input').val('');
+});
