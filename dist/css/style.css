@@ -511,6 +511,15 @@ a {
   color: #1c1c1c;
 }
 
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  font-family: inherit;
+}
+
 input {
   background-color: transparent;
   border: none;
@@ -734,6 +743,23 @@ section h3 {
   color: #000;
 }
 
+.magnific a {
+  width: 250px;
+  height: 150px;
+}
+
+.magnific a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.magnific .gallery {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 .list-yack a:not(:last-child) {
   margin-right: 20px;
 }
@@ -869,6 +895,26 @@ body.modal::after {
 
 .swiper .swiper-pagination-bullet:hover {
   opacity: 1;
+}
+
+.open_texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.marquee-img {
+  height: 350px;
+}
+
+.marquee-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .btn {
@@ -1373,6 +1419,7 @@ body.modal::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-left: auto;
 }
 
 .header3 .hamburger3 .hamburger__line {
@@ -1843,6 +1890,15 @@ body.modal::after {
           transform: translate(0%, -11px) rotate(-315deg);
 }
 
+.main-content.transform {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateX(-320px);
+      -ms-transform: translateX(-320px);
+          transform: translateX(-320px);
+}
+
 .loading1 {
   width: 70px;
   height: 70px;
@@ -2108,6 +2164,31 @@ input[type="number"] {
 input[type="number"]:hover,
 input[type="number"]:focus {
   -moz-appearance: number-input;
+}
+
+.open_text-1 {
+  width: 40%;
+}
+
+.open_text-1 p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow-y: hidden;
+}
+
+.open_text-1 button {
+  margin-top: 15px;
+  border: 1px solid #000;
+  padding: 5px 10px;
+}
+
+.open_text-1.open p {
+  display: block;
+}
+
+.open_text-2 {
+  width: 40%;
 }
 
 /*

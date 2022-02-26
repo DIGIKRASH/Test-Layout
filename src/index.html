@@ -314,6 +314,13 @@
 
                 </nav>
             </header>
+
+            <main class="main-content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quidem ullam tempore, ad aut laboriosam atque repellendus sunt, voluptatum dignissimos in quasi quis sequi ut suscipit odit beatae asperiores tempora?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quidem ullam tempore, ad aut laboriosam atque repellendus sunt, voluptatum dignissimos in quasi quis sequi ut suscipit odit beatae asperiores tempora?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quidem ullam tempore, ad aut laboriosam atque repellendus sunt, voluptatum dignissimos in quasi quis sequi ut suscipit odit beatae asperiores tempora?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quidem ullam tempore, ad aut laboriosam atque repellendus sunt, voluptatum dignissimos in quasi quis sequi ut suscipit odit beatae asperiores tempora?</p>
+            </main>
         </section>
 
 
@@ -499,15 +506,26 @@
 
 
         <!-- Аналог FancyBox (Magnific-Popup/подправлен курсор) -->
-        <section>
+        <section class="magnific">
             <h3>Аналог FancyBox (Magnific-Popup/подправлен курсор)</h3>
 
-            <a class="image-popup-vertical-fit" href="http://farm9.staticflickr.com/8241/8589392310_7b6127e243_b.jpg"
-                title="Caption. Can be aligned to any side and contain any HTML.">
-                <img src="http://farm9.staticflickr.com/8241/8589392310_7b6127e243_s.jpg" width="75" height="75">
+            <a href="./img/1.jpg" class="image-magnific" title="Милфорд-Саунд, Новая Зеландия">
+                <img src="./img/1.jpg" width="" height="" loading="lazy" alt="">
             </a>
 
-            <a class="popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto">Open YouTube video</a><br>
+            <div class="gallery">
+                <a href="./img/1.jpg" class="gallery-magnific" title="Милфорд-Саунд, Новая Зеландия<small>Памела Льюис</small>">
+                    <img src="./img/1.jpg" width="" height="" loading="lazy" alt="">
+                </a>
+                <a href="./img/2.jpg" class="gallery-magnific" title="Милфорд-Саунд, Новая Зеландия<small>Памела Льюис</small>">
+                    <img src="./img/2.jpg" width="" height="" loading="lazy" alt="">
+                </a>
+                <a href="./img/3.jpg" class="gallery-magnific" title="Милфорд-Саунд, Новая Зеландия<small>Памела Льюис</small>">
+                    <img src="./img/3.jpg" width="" height="" loading="lazy" alt="">
+                </a>
+            </div>
+
+            <a class="video-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto">Open YouTube video</a>
         </section>
 
 
@@ -535,8 +553,7 @@
 
             <input type="date">
 
-            <input type="text" class="datepicker-here form-control" id="el" name="today" data-language="fr" value=""
-                placeholder="Select Range" />
+            <input type="text" class="datepicker-here form-control" id="el" name="today" data-language="fr" value="" placeholder="Select Range" />
 
             <input type="text" class="datepicker-here form-control" id="el2" name="today" data-language="fr" value="" />
 
@@ -608,19 +625,16 @@
             <form id="contacts__form" class="contacts__form">
                 <div class="contacts__form-inputs">
                     <div class="contacts__form-input input-block">
-                        <input type="text" id="contacts__form-email" name="contacts__form-email" class="input"
-                            placeholder="Ваш e-mail*">
+                        <input type="text" id="contacts__form-email" name="contacts__form-email" class="input" placeholder="Ваш e-mail*">
                     </div>
 
                     <div class="contacts__form-input input-block">
-                        <input type="text" id="contacts__form-name" name="contacts__form-name" class="input"
-                            placeholder="Ваше имя">
+                        <input type="text" id="contacts__form-name" name="contacts__form-name" class="input" placeholder="Ваше имя">
                     </div>
                 </div>
 
                 <div class="contacts__form-textarea input-block">
-                    <textarea name="contacts__form-message" id="contacts__form-message" class="input"
-                        placeholder="Ваше сообщение*"></textarea>
+                    <textarea name="contacts__form-message" id="contacts__form-message" class="input" placeholder="Ваше сообщение*"></textarea>
                 </div>
 
                 <button type="submit" class="contacts__form-button btn">Отправить</button>
@@ -640,8 +654,7 @@
 
                 <input name="Имя" type="text" class="modal-block__input input" placeholder="Имя">
 
-                <input name="Телефон" type="tel" class="modal-block__input input" placeholder="Телефон*"
-                    id="header-phone" onkeyup="headerForm()">
+                <input name="Телефон" type="tel" class="modal-block__input input" placeholder="Телефон*" id="header-phone" onkeyup="headerForm()">
 
                 <div class="modal-block__footer">
                     <button class="modal-block__btn btn btn--orange" id="header-button" disabled>Получить
@@ -740,7 +753,32 @@
         </section>
 
 
+        <!-- Раскрыть текст по нажатию кнопки -->
+        <section>
+            <h3>Раскрыть текст по нажатию кнопки</h3>
 
+            <div class="open_texts">
+                <div class="open_text-1">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam ipsa debitis optio quos soluta odio obcaecati iusto reiciendis amet quam, rerum, aut voluptatem nam, corrupti cupiditate eos error iste mollitia. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam ipsa debitis optio quos soluta odio obcaecati iusto reiciendis amet quam, rerum, aut voluptatem nam, corrupti cupiditate eos error iste mollitia.</p>
+                    <button>Раскрыть</button>
+                </div>
+
+                крайний случай Readmore.js плагин
+            </div>
+        </section>
+
+
+        <!-- Бегущая строка (тег marquee) -->
+        <section>
+            <h3>Бегущая строка (тег marquee)</h3>
+
+            <marquee scrollamount="10">Бегущая строкаБегущая строка Бегущая строка (тег marquee) Бегущая строка (тег marquee) Бегущая строка (тег marquee)</marquee>
+            <marquee class="marquee-img" scrollamount="5">
+                <img src="./img/1.jpg" width="" height="" loading="lazy" alt="">
+                <img src="./img/1.jpg" width="" height="" loading="lazy" alt="">
+                <img src="./img/1.jpg" width="" height="" loading="lazy" alt="">
+            </marquee>
+        </section>
 
 
 

@@ -360,6 +360,7 @@ $('.hamburger2').on('click', function () {
 // Hamburger3
 $('.hamburger3').on('click', function () {
   $('.header3').toggleClass('mobile')
+  $('.main-content').toggleClass('transform')
 })
 
 
@@ -441,10 +442,17 @@ $('.select2').dropdown();
 
 
 //Аналог FancyBox (Magnific-Popup)
-$('.image-popup-vertical-fit').magnificPopup({
+$('.image-magnific').magnificPopup({
   type: 'image',
 });
-$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+$('.gallery-magnific').magnificPopup({
+  type: 'image',
+  gallery: {
+      enabled: true,
+  },
+  titleSrc: 'title',
+});
+$('.video-youtube').magnificPopup({
   type: 'iframe',
   removalDelay: 160,
   preloader: false,
@@ -483,7 +491,6 @@ $('#input-card').click(function () {
   $(this).setCursorPosition(0);
 }).mask("9999 9999 9999 9999", { "placeholder": "" });
 $('#input-card').mask("9999 9999 9999 9999", { "placeholder": "" });
-
 $('#input-phone').click(function () {
   $(this).setCursorPosition(3);
 }).mask("+7(999) 999-9999");
@@ -637,6 +644,7 @@ const swiper = new Swiper('.swiper', {
 });
 
 
+// Анимация при скролле WOW
 wow = new WOW(
   {
     boxClass: 'wow',      // default
@@ -648,11 +656,19 @@ wow = new WOW(
 )
 wow.init();
 
-
+// Кнопка очистки input'a
 $('#clear__form-btn').click(function (e) {
   e.preventDefault();
   $('#clear__form-input').val('');
 });
-;
+
+
+// Раскрыть текст по нажатию кнопки
+$('.open_text-1 button').click(function () {
+  $('.open_text-1').toggleClass('open');
+});
+$('.open_text-2 button').click(function () {
+  $('.open_text-2').toggleClass('open');
+});;
 
 

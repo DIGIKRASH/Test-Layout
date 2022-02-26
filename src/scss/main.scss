@@ -367,6 +367,7 @@
         height: 25px;
         flex-direction: column;
         justify-content: space-between;
+        margin-left: auto;
     }
     .hamburger3 .hamburger__line {
         width: 40px;
@@ -426,6 +427,12 @@
         .menu__list::before {
             width: 60vw !important;
         }
+    }
+}
+.main-content {
+    &.transform {
+        transition: 0.3s;
+        transform: translateX(-320px);
     }
 }
 
@@ -633,4 +640,28 @@ input[type="number"] {
 input[type="number"]:hover,
 input[type="number"]:focus {
     -moz-appearance: number-input;
+}
+
+// Раскрыть текст по нажатию кнопки
+.open_text-1 {
+    width: 40%;
+    p {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow-y: hidden;
+    }
+    button {
+        margin-top: 15px;
+        border: 1px solid #000;
+        padding: 5px 10px;
+    }
+    &.open {
+        p {
+            display: block;
+        }
+    }
+}
+.open_text-2 {
+    width: 40%;
 }
