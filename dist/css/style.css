@@ -890,7 +890,7 @@ body.modal::after {
       -ms-flex-pack: center;
           justify-content: center;
   height: 200px;
-  background-color: #FFC;
+  background-color: #ffc;
 }
 
 .swiper .swiper-pagination-bullet:hover {
@@ -915,6 +915,17 @@ body.modal::after {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.vanilla .places__item-content {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 50px;
+  border-radius: 15px;
+}
+
+.vanilla .places__item-btn {
+  margin-top: 25px;
 }
 
 .btn {
@@ -2189,6 +2200,55 @@ input[type="number"]:focus {
 
 .open_text-2 {
   width: 40%;
+}
+
+.vanilla {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(1000px);
+          transform: perspective(1000px);
+}
+
+.vanilla .places__item-content {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(1000px);
+          transform: perspective(1000px);
+}
+
+.vanilla .parallax-3d {
+  -webkit-transform: translateZ(50px);
+          transform: translateZ(50px);
+}
+
+.cursor-dot,
+.cursor-dot-outline {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+}
+
+.cursor-dot-outline {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*

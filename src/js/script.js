@@ -8,12 +8,14 @@
 @@include('../../node_modules/swiper/swiper-bundle.min.js');
 @@include('../../node_modules/air-datepicker/air-datepicker.js');
 @@include('../../node_modules/wowjs/dist/wow.min.js');
+@@include('../../node_modules/vanilla-tilt/dist/vanilla-tilt.min.js');
 
 @@include('./plugins/semantic.min.js');
 @@include('./plugins/simple-select.js');
 @@include('./plugins/jquery.maskedinput.js');
 @@include('./plugins/odometer.js');
 @@include('./plugins/theia-sticky-sidebar.min.js');
+@@include('./plugins/jquery.spincrement.min.js');
 
 
 

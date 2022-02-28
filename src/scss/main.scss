@@ -631,8 +631,8 @@
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 input[type="number"] {
     -moz-appearance: textfield;
@@ -664,4 +664,42 @@ input[type="number"]:focus {
 }
 .open_text-2 {
     width: 40%;
+}
+
+// Эффект-3D "Vanilla-Tilt"
+.vanilla {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    .places__item-content {
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+    }
+    .parallax-3d {
+        transform: translateZ(50px);
+    }
+}
+
+// Сustom cursor
+.cursor-dot,
+.cursor-dot-outline {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.cursor-dot {
+    $size: 8px;
+    width: $size;
+    height: $size;
+    background-color: #000;
+}
+.cursor-dot-outline {
+    $size: 40px;
+    width: $size;
+    height: $size;
+    background-color: rgba(#000, 0.5);
 }

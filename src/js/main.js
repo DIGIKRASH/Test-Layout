@@ -143,15 +143,20 @@ $('.image-magnific').magnificPopup({
 $('.gallery-magnific').magnificPopup({
   type: 'image',
   gallery: {
-      enabled: true,
+    enabled: true,
   },
-  titleSrc: 'title',
+  image: {
+    titleSrc: function (item) {
+      return item.el.find('.gallery__item-place').html() + `<small>${item.el.find('.gallery__item-name').html()}</small>`;
+    },
+  }
 });
 $('.video-youtube').magnificPopup({
   type: 'iframe',
   removalDelay: 160,
   preloader: false,
 });
+
 
 
 // Input[number] без стрелок и нельзя написать букву e
@@ -307,6 +312,7 @@ const swiper = new Swiper('.swiper', {
   // direction: "vertical",
   // effect: "fade",
   autoplay: {
+    enabled: false,
     delay: 2500,
     disableOnInteraction: false,
   },
@@ -334,8 +340,29 @@ const swiper = new Swiper('.swiper', {
     640: {
       slidesPerView: 4,
       spaceBetween: 40
-    }
+    },
+    // Autoplay при адаптиве
+    // 0: {
+    //   autoplay: {
+    //     enabled: true,
+    //     delay: 100,
+    //   },
+    // },
+    // 640: {
+    //   autoplay: {
+    //     enabled: false,
+
+    //   },
+    // },
   }
+});
+// Запуск Аutoplay только когда пользователь вошел в область видимости
+$(window).scroll(function () {
+  $('.ways').each(function () {
+    if ($(window).scrollTop() + $(window).height() >= $(this).position().top && $(window).scrollTop() < $(this).position().top + $(this).height()) {
+      swiper_ways.autoplay.start();
+    }
+  });
 });
 
 
@@ -365,3 +392,154 @@ $('.open_text-1 button').click(function () {
 $('.open_text-2 button').click(function () {
   $('.open_text-2').toggleClass('open');
 });
+
+
+
+// --- Эффект-3D "Vanilla-Tilt"
+let destroyBox = document.querySelector(".vanilla");
+VanillaTilt.init(destroyBox, {
+  max: 15,
+  speed: 1000,
+  scale: 1.05,
+  transition: true,
+  easing: "cubic-bezier(.03,.98,.52,.99)",
+});
+if (window.innerWidth < 700) {
+  destroyBox.vanillaTilt.destroy();
+}
+
+
+// --- Custom Cursor
+var cursor = {
+  delay: 8,
+  _x: 0,
+  _y: 0,
+  endX: (window.innerWidth / 2),
+  endY: (window.innerHeight / 2),
+  cursorVisible: true,
+  cursorEnlarged: false,
+  $dot: document.querySelector('.cursor-dot'),
+  $outline: document.querySelector('.cursor-dot-outline'),
+
+  init: function () {
+    // Set up element sizes
+    this.dotSize = this.$dot.offsetWidth;
+    this.outlineSize = this.$outline.offsetWidth;
+
+    this.setupEventListeners();
+    this.animateDotOutline();
+  },
+
+  //     updateCursor: function(e) {
+  //         var self = this;
+
+  //         console.log(e)
+
+  //         // Show the cursor
+  //         self.cursorVisible = true;
+  //         self.toggleCursorVisibility();
+
+  //         // Position the dot
+  //         self.endX = e.pageX;
+  //         self.endY = e.pageY;
+  //         self.$dot.style.top = self.endY + 'px';
+  //         self.$dot.style.left = self.endX + 'px';
+  //     },
+
+  setupEventListeners: function () {
+    var self = this;
+
+    // Anchor hovering
+    document.querySelectorAll('a').forEach(function (el) {
+      el.addEventListener('mouseover', function () {
+        self.cursorEnlarged = true;
+        self.toggleCursorSize();
+      });
+      el.addEventListener('mouseout', function () {
+        self.cursorEnlarged = false;
+        self.toggleCursorSize();
+      });
+    });
+
+    // Click events
+    document.addEventListener('mousedown', function () {
+      self.cursorEnlarged = true;
+      self.toggleCursorSize();
+    });
+    document.addEventListener('mouseup', function () {
+      self.cursorEnlarged = false;
+      self.toggleCursorSize();
+    });
+
+
+    document.addEventListener('mousemove', function (e) {
+      // Show the cursor
+      self.cursorVisible = true;
+      self.toggleCursorVisibility();
+
+      // Position the dot
+      self.endX = e.pageX;
+      self.endY = e.pageY;
+      self.$dot.style.top = self.endY + 'px';
+      self.$dot.style.left = self.endX + 'px';
+    });
+
+    // Hide/show cursor
+    document.addEventListener('mouseenter', function (e) {
+      self.cursorVisible = true;
+      self.toggleCursorVisibility();
+      self.$dot.style.opacity = 1;
+      self.$outline.style.opacity = 1;
+    });
+
+    document.addEventListener('mouseleave', function (e) {
+      self.cursorVisible = true;
+      self.toggleCursorVisibility();
+      self.$dot.style.opacity = 0;
+      self.$outline.style.opacity = 0;
+    });
+  },
+
+  animateDotOutline: function () {
+    var self = this;
+
+    self._x += (self.endX - self._x) / self.delay;
+    self._y += (self.endY - self._y) / self.delay;
+    self.$outline.style.top = self._y + 'px';
+    self.$outline.style.left = self._x + 'px';
+
+    requestAnimationFrame(this.animateDotOutline.bind(self));
+  },
+
+  toggleCursorSize: function () {
+    var self = this;
+
+    if (self.cursorEnlarged) {
+      self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
+      self.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+    } else {
+      self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
+      self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
+    }
+  },
+
+  toggleCursorVisibility: function () {
+    var self = this;
+
+    if (self.cursorVisible) {
+      self.$dot.style.opacity = 1;
+      self.$outline.style.opacity = 1;
+    } else {
+      self.$dot.style.opacity = 0;
+      self.$outline.style.opacity = 0;
+    }
+  }
+}
+cursor.init();
+// При наведении на input, скрывать cursor
+$('input').on('mouseover', function () {
+  $('.cursor-dot-outline').css('background-color', 'transparent');
+})
+$('input').on('mouseout', function () {
+  $('.cursor-dot-outline').css('background-color', 'rgba(28,28,28,.5)');
+})
